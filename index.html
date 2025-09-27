@@ -61,7 +61,7 @@
         }
     </style>
 </head>
-<body class="bg-gradient-to-br from-gray-900 via-purple-900 to-black text-white min-h-screen flex flex-col items-center justify-center p-4">
+<body class="bg-gradient-to-br from-gray-900 via-purple-900 to-black text-white min-h-screen flex flex-col items-center p-4">
 
     <!-- Sticky Countdown Timer Header -->
     <header id="countdown-header" class="sticky top-0 left-0 right-0 w-full z-50 p-4 bg-black bg-opacity-30 backdrop-blur-md shadow-lg">
@@ -87,21 +87,24 @@
 
     <!-- Main Content -->
     <main class="flex-grow flex items-center justify-center w-full">
-        <div class="w-full max-w-2xl mx-auto bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl p-6 md:p-10 my-10 text-center border border-white/20 content-card">
+        <div class="w-full max-w-2xl mx-auto bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl p-6 md:p-10 my-10 border border-white/20 content-card">
             
             <!-- Header Section -->
-            <h1 class="font-playfair text-4xl md:text-5xl font-bold mb-2 sparkle">✨ Lifetime Subscription of Me ✨</h1>
-            <p class="text-lg text-purple-200 mb-8">Congratulations! 🎉 You’ve officially unlocked the premium, ad-free, lifetime subscription of me. We started with a Canva subscription, but getting to know you more every day feels like the real upgrade. So here’s my offer: a lifetime subscription to me — no expiry, no hidden charges. Just unlimited kindness, laughter, and growing together (with a little bit of overthinking😅).
+            <div class="text-center">
+                <h1 class="font-playfair text-4xl md:text-5xl font-bold mb-2 sparkle">✨ Lifetime Subscription of Me ✨</h1>
+                <p class="text-lg text-purple-200 mb-8">Congratulations! 🎉 You’ve officially unlocked the premium, ad-free, lifetime subscription of me.</p>
+            </div>
+            
+            <div class="text-left space-y-4 text-purple-200/90 text-lg">
+                <p>We started with a Canva subscription, but getting to know you more every day feels like the real upgrade. So here’s my offer: a lifetime subscription to me — no expiry, no hidden charges. Just unlimited kindness, laughter, and growing together (with a little bit of overthinking😅).</p>
+                <p>You asked me how I feel about you. Honestly, it’s not about grand gestures or big events for me. When I think of you, I think of the small, everyday things — looking into your eyes when you’re watching something, listening to you talk about what you’re passionate about, or explaining something even if I don’t fully get it.</p>
+                <p>I imagine a life together, coming home from work, maybe I’m cooking something for you or you’re cooking for me, watching something side by side, joking around, taking care of each other. Sharing childhood stories, your fears, the things you love most. Just having fun and being ourselves.</p>
+                <p>All in all, I think about loving you every day, growing with you, and holding on to you until the end of days. It’s scary how much I feel for you, and I don’t think we should give that up. We don’t need to make any big decisions right now, we just need to give ourselves a real chance to see what we could be together.</p>
+                <p>People hold back their feelings, afraid of giving too much and not getting the same in return. But with you, I don’t have that fear. I don’t feel the need to measure or hold back. I just want to give you my all, every time, without hesitation.</p>
+            </div>
 
-You asked me how I feel about you. Honestly, it’s not about grand gestures or big events for me. When I think of you, I think of the small, everyday things — looking into your eyes when you’re watching something, listening to you talk about what you’re passionate about, or explaining something even if I don’t fully get it.
 
-I imagine a life together, coming home from work, maybe I’m cooking something for you or you’re cooking for me, watching something side by side, joking around, taking care of each other. Sharing childhood stories, your fears, the things you love most. Just having fun and being ourselves.
-
-All in all, I think about loving you every day, growing with you, and holding on to you until the end of days. It’s scary how much I feel for you, and I don’t think we should give that up. We don’t need to make any big decisions right now, we just need to give ourselves a real chance to see what we could be together.
-
-People hold back their feelings, afraid of giving too much and not getting the same in return. But with you, I don’t have that fear. I don’t feel the need to measure or hold back. I just want to give you my all, every time, without hesitation.</p>
-
-            <div class="text-left space-y-8">
+            <div class="text-left space-y-8 mt-8">
                 <!-- What You Get Section -->
                 <div>
                     <h2 class="text-xl font-bold text-purple-300 border-b-2 border-purple-400 pb-2 mb-4 flex items-center gap-3">
@@ -151,7 +154,7 @@ People hold back their feelings, afraid of giving too much and not getting the s
                         <li>Might never miss a chance to flirt with you and violate some HR policies</li>
                         <li>Will learn to make Korolla Dishes on demand</li>
                         <li>Adjusting to your moshari policies 🦟</li>
-                         <li>Listening to your anger stories (with patience mode always on 🧘)</li>
+                        <li>Listening to your anger stories (with patience mode always on 🧘)</li>
                         <li>Efforts to keep making you smile, even on bad days</li>
                         <li>A teammate for life: whether it’s winning together or figuring things out side by side</li>
                     </ul>
@@ -159,7 +162,7 @@ People hold back their feelings, afraid of giving too much and not getting the s
             </div>
 
             <!-- Footer Note -->
-            <p class="mt-8 text-sm text-gray-400 italic">No refunds, no trial period… but guaranteed to keep learning how to be better for you every day ❤️</p>
+            <p class="mt-8 text-sm text-center text-gray-400 italic">No refunds, no trial period… but guaranteed to keep learning how to be better for you every day ❤️</p>
         </div>
     </main>
 
@@ -174,6 +177,7 @@ People hold back their feelings, afraid of giving too much and not getting the s
                 No
             </button>
         </div>
+        <p id="persuasion-text" class="mt-4 text-lg text-pink-300 font-semibold h-8 transition-opacity duration-500 ease-in-out"></p>
     </footer>
 
     <script>
@@ -185,7 +189,7 @@ People hold back their feelings, afraid of giving too much and not getting the s
             seconds: document.getElementById('seconds'),
         };
 
-        // Set the end date: 27th September 2025
+        // Set the end date: 28th September 2025
         const endDate = new Date('2025-09-28T00:00:00').getTime();
 
         const timerInterval = setInterval(() => {
@@ -194,6 +198,7 @@ People hold back their feelings, afraid of giving too much and not getting the s
 
             if (distance < 0) {
                 clearInterval(timerInterval);
+                clearInterval(persuasionInterval);
                 document.getElementById('countdown-header').innerHTML = "<div class='text-center w-full text-xl font-bold'>The offer has expired!</div>";
                 return;
             }
@@ -217,11 +222,9 @@ People hold back their feelings, afraid of giving too much and not getting the s
             const containerRect = buttonContainer.getBoundingClientRect();
             const buttonRect = noButton.getBoundingClientRect();
             
-            // Calculate max positions ensuring the button stays within the container
             const maxX = containerRect.width - buttonRect.width;
             const maxY = containerRect.height - buttonRect.height;
             
-            // Generate random positions
             const randomX = Math.random() * maxX;
             const randomY = Math.random() * maxY;
 
@@ -229,7 +232,6 @@ People hold back their feelings, afraid of giving too much and not getting the s
             noButton.style.top = `${randomY}px`;
         };
 
-        // Move the button on hover and click (for touch devices)
         noButton.addEventListener('mouseover', moveButton);
         noButton.addEventListener('click', moveButton);
         
@@ -238,7 +240,32 @@ People hold back their feelings, afraid of giving too much and not getting the s
         yesButton.addEventListener('click', () => {
             window.open('https://m.me/ahmednaeem162', '_blank');
         });
+
+        // --- Interchangeable Persuasion Text Logic ---
+        const persuasionText = document.getElementById('persuasion-text');
+        const phrases = [
+            "The cats need a mother",
+            "Will make Korolla Soup",
+            "Whatever you say about Moshari",
+            "Daily Forehead Kisses"
+        ];
+        let phraseIndex = 0;
+
+        // Set initial text
+        persuasionText.textContent = phrases[phraseIndex];
+        persuasionText.style.opacity = 1;
+
+        const persuasionInterval = setInterval(() => {
+            persuasionText.style.opacity = 0; // Start fading out
+
+            setTimeout(() => {
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                persuasionText.textContent = phrases[phraseIndex];
+                persuasionText.style.opacity = 1; // Fade back in
+            }, 500); // This timeout should match the CSS transition duration
+        }, 3000); // Change text every 3 seconds
         
     </script>
 </body>
 </html>
+
